@@ -1,0 +1,12 @@
+[Desktop Entry]
+Name=Nwjs Dev Tool
+GenericName=Nwjs Dev Tool
+Comment=Build and run your nwjs projects
+Exec=/home/rurigk/git/nwjsdevtool/nw
+Icon=/home/rurigk/git/nwjsdevtool/builder/nw-icon.png
+StartupNotify=true
+Terminal=false
+Type=Application
+Categories=Develop;
+X-GNOME-Gettext-Domain=Nwjs Dev Tool
+Name[es_MX]=Nwjs Dev Tool

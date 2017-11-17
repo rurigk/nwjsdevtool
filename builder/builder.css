@@ -1,0 +1,216 @@
+@font-face {
+	font-family: 'FontAwesome';
+	src: url('fonts/fontawesome-webfont.eot?v=4.7.0');
+	src: url('fonts/fontawesome-webfont.eot?#iefix&v=4.7.0') format('embedded-opentype'), url('fonts/fontawesome-webfont.woff2?v=4.7.0') format('woff2'), url('fonts/fontawesome-webfont.woff?v=4.7.0') format('woff'), url('fonts/fontawesome-webfont.ttf?v=4.7.0') format('truetype'), url('fonts/fontawesome-webfont.svg?v=4.7.0#fontawesomeregular') format('svg');
+	font-weight: normal;
+	font-style: normal;
+}
+
+input,select{
+	-webkit-app-region: no-drag;
+}
+
+.l{float: left;}
+.r{float: right;}
+.bz{box-sizing: border-box;-moz-box-sizing: border-box;-webkit-box-sizing: border-box;-o-box-sizing: border-box;}
+.nosel{-moz-user-select: none;-webkit-user-select: none;-ms-user-select: none;cursor: default;}
+.t80{
+	font-size: 0.8em;
+}
+.t120{
+	font-size: 1.2em;
+}
+.bl{
+	font-weight: bold;
+}
+
+.align-vertical {
+	display: flex;
+	align-items: center;
+}
+.align-horizontal {
+	display: flex;
+	justify-content: center;
+}
+.align-center{
+	text-align: center;
+}
+
+body{
+	margin: 0px;
+	border: 2px solid #222D32;
+	border-top: 0px solid transparent;
+	font-family: 'FontAwesome', sans-serif;
+}
+
+.window-title-bar{
+	position: absolute;
+	background-color: #222D32;
+	left: 0px;
+	width: 100%;
+	height: 50px;
+	color: #FFF;
+	-webkit-app-region: drag;
+	-webkit-user-select: none;
+}
+.window-title{
+	height: 50px;
+	margin-left: 15px;
+}
+.window-controls-aligner{
+	margin-right: 10px;
+}
+.window-controls-container{
+	height: 50px;
+	-webkit-app-region: no-drag;
+}
+.window-control-button{
+	width: 30px;
+	height: 30px;
+	border-radius: 2px;
+	color: #CFD8DC;
+	margin-left: 2px;
+	-webkit-app-region: no-drag;
+}
+.window-control-button:hover{
+	background-color: rgba(255, 255, 255, 0.08);
+}
+.window-control-button:active{
+	background-color: rgba(255, 255, 255, 0.15);
+}
+.window-control-button.red{
+	width: 30px;
+	height: 30px;
+	border-radius: 2px;
+}
+.window-control-button.red:hover{
+	background-color: rgba(255, 82, 82, 0.9);
+}
+.window-control-button.red:active{
+	background-color: rgba(255, 82, 82, 1);
+}
+
+.window-builder-controls-left{
+	height: 50px;
+	margin-left: 15px;
+}
+.window-builder-controls-right{
+	height: 50px;
+	margin-right: 15px;
+}
+.window-builder-controls-right[show="0"]{
+	display: none;
+}
+
+.window-control-separator-r{
+	border-left: 1px solid #435258;
+	width: 10px;
+	height: 15px;
+}
+.window-control-separator-l{
+	border-right: 1px solid #435258;
+	width: 10px;
+	height: 15px;
+}
+
+.tselect{
+	background: #CFD8DC;
+	border: 0px solid transparent;
+	outline: none;
+	border-left: 3px solid #16A085;
+	height: 22px;
+	border-radius: 2px;
+	font-size: 16px;
+	margin-right: 6px;
+	width: 120px;
+}
+#window-builder-nwjs-platform-selector{
+	width: 100px;
+}
+#window-builder-nwjs-flavor-selector{
+	width: 100px;
+}
+.window-builder-run, .window-builder-download, .window-builder-build{
+	display: none;
+}
+
+#window-builder-manifest{
+	display: none;
+}
+.window-manifest-name{
+	margin-left: 15px;
+}
+.window-content-container{
+	position: absolute;
+	top: 50px;
+	bottom: 0px;
+	left: 0px;
+	right: 0px;
+}
+.console-container{
+	position: absolute;
+	bottom: 0px;
+	left: 0px;
+	width: 100%;
+	height: 250px;
+	background-color: #222D32;
+	color: #CFD8DC;
+}
+.console-info{
+	background-color: rgba(0, 0, 0, 0.3);
+	height: 35px;
+	padding: 0px 15px 0px 15px;
+}
+.console-logs{
+	position: absolute;
+	top: 35px;
+	left: 0px;
+	bottom: 0px;
+	right: 0px;
+	overflow: auto;
+	padding: 10px;
+}
+.h35{
+	height: 35px;
+}
+
+.console-clear{
+	cursor: pointer;
+}
+
+.console-message-error{
+	color: #ff5252;
+}
+.console-message-exit{
+	color: #4f9fc3;
+}
+.editor-container{
+	position: absolute;
+	top: 0px;
+	left: 0px;
+	width: 100%;
+	bottom: 250px;
+	border-top: 1px solid #2c3740;
+}
+.window-builder-download-right{
+	height: 50px;
+	margin-right: 15px;
+}
+.window-builder-download-right[show="0"]{
+	display: none;
+}
+
+.dl-progress-container{
+	position: relative;
+	width: 100px;
+	height: 20px;
+	border: 1px solid #16A085;
+	border-radius: 2px;
+	margin-left: 10px;
+}
+.dl-progress-bar{
+	height: 100%;
+	width: 0%;
+	background-color: #16A085;
+}
+

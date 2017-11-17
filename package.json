@@ -1,0 +1,61 @@
+{
+	"main": "builder/index.html",
+	"name": "nwjs-builder",
+	"description": "Build a nwjs project more easy",
+	"keywords": ["nw.js", "node-webkit", "builder"],
+	"version": "0.1.2",
+	"single-instance": true,
+	"window": {
+	"title": "Nw.js builder",
+		"icon": "builder/nw-icon.png",
+		"position": "center",
+		"toolbar": false,
+		"frame": false,
+		"width": 1060,
+		"height": 660,
+		"min_width": 350,
+		"min_height": 114
+	},
+	"webkit":{
+		"plugin": false
+	},
+	"dependencies": {
+	},
+	"devDependencies": {
+    "xo": "*"
+  },
+  "keywords": [],
+  "author": "rurigk",
+  "license": "MIT",
+  "xo": {
+    "rules": {
+      "capitalized-comments": [
+        "off",
+        "never",
+        {
+          "ignorePattern": "pragma|ignored",
+          "ignoreInlineComments": true
+        }
+      ],
+      "space-before-blocks": [
+        "off",
+        "always"
+      ],
+      "new-cap": [
+        "error",
+        {
+          "newIsCap": false,
+          "capIsNew": false
+        }
+      ],
+      "no-unused-vars": "warn",
+      "no-var": "off",
+      "keyword-spacing": "off",
+      "eqeqeq": "off",
+      "no-negated-condition": "off",
+      "no-eq-null": "off",
+      "guard-for-in": "off",
+      "no-multi-spaces": "off"
+    }
+	}
+}

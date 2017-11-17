@@ -1,0 +1,69 @@
+<html>
+	<head>
+		<meta charset='Utf-8'>
+		<meta http-equiv="Content-Type" content="text/html;charset=utf-8">
+		<title>Nw.js builder</title>
+		<link rel="stylesheet" type="text/css" href="builder.css">
+		<link href="dist/jsoneditor.css" rel="stylesheet" type="text/css">
+		<script src="dist/jsoneditor.min.js"></script>
+		<script type="text/javascript" src='domtools.js'></script>
+		<script type='text/javascript' src='builder.js'></script>
+	</head>
+	<body class='bz'>
+		<div class='window-title-bar bz'>
+			<div class='window-title align-vertical bz l'>
+				<img src='nw-icon.png' width='25px' height='25px'>
+			</div>
+			<div class='window-builder-controls-left align-vertical l'>
+				<div class='window-control-separator-r l'></div>
+				<div class='window-control-button window-builder-manifest-button align-vertical align-horizontal l'>&#xf07c;</div>
+				<input type='file' id='window-builder-manifest' accept=".json">
+				<div class='window-control-separator-l l'></div>
+				<div class='window-manifest-name'></div>
+			</div>
+			<div class='r'>
+				<div class='window-builder-controls-right align-vertical l' show='1'>
+					<select id="window-builder-nwjs-version-selector" class='tselect l'>
+					</select>
+					<select id="window-builder-nwjs-platform-selector" class='tselect l'>
+					</select>
+					<select id="window-builder-nwjs-flavor-selector" class='tselect l'>
+					</select>
+					<div class='window-control-button window-builder-run align-vertical align-horizontal l t120'>&#xf144;</div>
+					<div class='window-control-button window-builder-download align-vertical align-horizontal l t120'>&#xf019;</div>
+					<div class='window-control-button window-builder-build align-vertical align-horizontal l t120'>&#xf0e3;</div>
+					<div class='window-control-separator-l l'></div>
+				</div>
+				<div class='window-builder-download-right align-vertical l' show='0'>
+					<div class='l'>Downloading</div>
+					<div class='dl-progress-container l'>
+						<div class='dl-progress-bar'></div>
+					</div>
+					<div class='window-control-separator-l l'></div>
+				</div>
+				<div class='window-controls-aligner bz l'>
+					<div class='window-controls-container align-vertical'>
+						<div class='window-control-minimize window-control-button align-vertical align-horizontal t80'>&#xf2d1;</div>
+						<div class='window-control-close red window-control-button align-vertical align-horizontal'>&#xf00d;</div>
+					</div>
+				</div>
+			</div>
+		</div>
+		<div class='window-content-container bz'>
+			<div class='editor-container'>
+				<div class='jsoneditor'></div>
+			</div>
+			<div class='console-container'>
+				<div class='console-info'>
+					<div class='l h35 align-vertical'>
+						<div class='bl l nosel'>Console output</div>
+					</div>
+					<div class='r h35 align-vertical'>
+						<div class='l console-clear'>Clear</div>
+					</div>
+				</div>
+				<div class='console-logs'></div>
+			</div>
+		</div>
+	</body>
+</html>
