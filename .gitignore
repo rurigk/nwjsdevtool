@@ -147,3 +147,4 @@ natives_*
 payload
 resources.pak
 snapshot_*
+package-lock.json

@@ -2,6 +2,15 @@ var fs = require('fs');
 var path = require('path');
 var os = require('os');
 var packageManager = require('./modules/packagemanager.js');
+var Convert = require('ansi-to-html');
+
+var convert = new Convert({
+	fg: '#FFF',
+	bg: 'transparent',
+	newline: true,
+	escapeXML: false,
+	stream: true
+});
 
 var ui = {};
 var cache = {};
@@ -161,10 +170,12 @@ function Run(){
 		'',
 		(stdout, stderr) => {
 			if(stdout != ''){
-				ui.console.innerHTML += `<div class='console-message-log'>${stdout}</div>`;
+				ui.console.innerHTML += convert.toHtml(stdout);
+				// ui.console.innerHTML += `<div class='console-message-log'>${stdout}</div>`;
 			}
 			if(stderr != ''){
-				ui.console.innerHTML += `<div class='console-message-error'>${stderr}</div>`;
+				ui.console.innerHTML += convert.toHtml(stderr);
+				// ui.console.innerHTML += `<div class='console-message-error'>${stderr}</div>`;
 			}
 		},
 		exitcode => {
