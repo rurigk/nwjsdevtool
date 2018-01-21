@@ -16,13 +16,17 @@ var ui = {};
 var cache = {};
 var workdir = '';
 var manifest = {};
+var win = null;
 
 window.addEventListener('load', () => {
 	loadElements();
-	showNwjsVersions();
+	packageManager.LoadPackageDb(() => {
+		showNwjsVersions();
+	})
 });
 
 function loadElements(){
+	win = nw.Window.get();
 	ui.minimize = document.querySelector('.window-control-minimize');
 	ui.close = document.querySelector('.window-control-close');
 

@@ -22,7 +22,9 @@ module.exports = {
 	MakePkgName,
 	CheckIfVersionIsInstalled,
 	Run,
-	IsCandidateToRun
+	IsCandidateToRun,
+	packages,
+	LoadPackageDb
 };
 
 function n00p(){}
@@ -35,16 +37,19 @@ function UpdateVersions(){
 				rawdata += d;
 			});
 			res.on('end', () => {
+				console.log('Downloaded');
 				fs.writeFileSync('./builder/sources/versions.json', rawdata);
 				resolve();
 			});
 		}).on('error', e => {
+			console.log('Error on download');
 			reject(e);
 		});
 	});
 }
-async function LoadPackageDb(){
+async function LoadPackageDb(callback){
 	try{
+		await UpdateVersions();
 		packagesRaw = JSON.parse(fs.readFileSync('./builder/sources/versions.json'));
 	}catch(err){
 		await UpdateVersions();
@@ -53,6 +58,7 @@ async function LoadPackageDb(){
 	for (var i = 0; i < packagesRaw.versions.length; i++) {
 		packages[packagesRaw.versions[i].version] = packagesRaw.versions[i];
 	}
+	callback();
 }
 
 function GetVersionsAvailable(){
@@ -233,4 +239,3 @@ function sortAlphaNum(a, b) {
 	return -1;
 }
 
-LoadPackageDb();
